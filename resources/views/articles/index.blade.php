@@ -6,7 +6,7 @@
 			<div class="col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<span>Nurtannio</span>
+						<span>{{ Auth::user()->name }}</span>
 						<span class="pull-right">
 							{{$article->created_at->diffForHumans()}}
 						</span>
