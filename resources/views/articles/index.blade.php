@@ -14,7 +14,8 @@
 					</div>
 
 					<div class="panel-body">
-						{{$article->content}}
+						{{$article->shortContent}}
+						<a href="/articles/{{$article->id}}">Read more</a>
 					</div>
 
 					<div class="panel-footer clearfix" style="background: white">
@@ -26,7 +27,11 @@
 		@empty
 			No Articles.
 		@endforelse
-		
 	</div>
 
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			{{$articles->links()}}
+		</div>
+	</div>
 @endsection
